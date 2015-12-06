@@ -1,3 +1,5 @@
+# MODIFIED NeoPixel Library - removed use of digitalWrite/pinMode - pinMode burns about 250b of flash. This means the user must set the pin mode (via direct port manipulation - otherwise you haven't saved anything). 
+
 # Adafruit NeoPixel Library [![Build Status](https://travis-ci.org/adafruit/Adafruit_NeoPixel.svg?branch=master)](https://travis-ci.org/adafruit/Adafruit_NeoPixel)
 
 Arduino library for controlling single-wire-based LED pixels and strip such as the [Adafruit 60 LED/meter Digital LED strip][strip], the [Adafruit FLORA RGB Smart Pixel][flora], the [Adafruit Breadboard-friendly RGB Smart Pixel][pixel], the [Adafruit NeoPixel Stick][stick], and the [Adafruit NeoPixel Shield][shield].

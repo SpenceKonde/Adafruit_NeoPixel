@@ -59,14 +59,14 @@ Adafruit_NeoPixel::Adafruit_NeoPixel() :
 
 Adafruit_NeoPixel::~Adafruit_NeoPixel() {
   if(pixels)   free(pixels);
-  if(pin >= 0) pinMode(pin, INPUT);
+  //if(pin >= 0) pinMode(pin, INPUT);
 }
 
 void Adafruit_NeoPixel::begin(void) {
-  if(pin >= 0) {
-    pinMode(pin, OUTPUT);
-    digitalWrite(pin, LOW);
-  }
+  //if(pin >= 0) {
+    //pinMode(pin, OUTPUT);
+    //digitalWrite(pin, LOW);
+  //}
   begun = true;
 }
 
@@ -1110,13 +1110,13 @@ void Adafruit_NeoPixel::show(void) {
 
 // Set the output pin number
 void Adafruit_NeoPixel::setPin(uint8_t p) {
-  if(begun && (pin >= 0)) pinMode(pin, INPUT);
+  //if(begun && (pin >= 0)) pinMode(pin, INPUT);
   if(p >= 0) {
     pin = p;
-    if(begun) {
-      pinMode(p, OUTPUT);
-      digitalWrite(p, LOW);
-    }
+    //if(begun) {
+    //  pinMode(p, OUTPUT);
+    //  digitalWrite(p, LOW);
+    //}
 #ifdef __AVR__
     port    = portOutputRegister(digitalPinToPort(p));
     pinMask = digitalPinToBitMask(p);
